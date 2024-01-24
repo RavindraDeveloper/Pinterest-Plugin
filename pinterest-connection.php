@@ -1,4 +1,5 @@
 <?php
+echo "Hello";
 /*
 Plugin Name: Pinterest Connection
 Description: Extract h2 headings and image URLs from a selected WordPress post and create pins in pinterest.
