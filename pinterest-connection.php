@@ -10,7 +10,6 @@ define('PSY_BOARD_PAGE_SIZE', 100);
 define('PSY_CURRENT_TIME', current_time('mysql'));
 define('PSY_PROCESSING_TIME', 180); // in seconds
 define('PSY_PIN_SUCCESS_CODE', 201); // Successful pin creation.
-define('PSY_DATE_FORMAT', date('d-M-Y H:i:s'));
 
 // Include pinterest auth flow
 require_once plugin_dir_path(__FILE__) . 'inc/pinterest-auth-flow.php';
@@ -19,8 +18,8 @@ require_once plugin_dir_path(__FILE__) . 'inc/pinterest-auth-flow.php';
 add_action('admin_enqueue_scripts', 'enqueue_extract_headings_scripts');
 function enqueue_extract_headings_scripts($hook)
 {
-    if ($hook == 'toplevel_page_pinterest-connection-plugin') {
-        wp_enqueue_script('extract-headings-script', plugin_dir_url(__FILE__) . 'js/extract-headings-script.js', array('jquery'), '1.32', true);
+    if ($hook == 'settings_page_extract-headings-plugin') {
+        wp_enqueue_script('extract-headings-script', plugin_dir_url(__FILE__) . 'js/extract-headings-script.js', array('jquery'), '1.5', true);
         wp_enqueue_style('extract-headings-style', plugin_dir_url(__FILE__) . 'extract-headings-style.css');
         wp_enqueue_style('bootsprap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
         wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -43,7 +42,7 @@ function enqueue_extract_headings_scripts($hook)
 // Custom logging function
 function psy_error_log($message)
 {
-    $date = PSY_DATE_FORMAT;
+    $date = date('d-M-Y H:i:s');
     $plugin_dir = plugin_dir_path(__FILE__);
     $log_directory = $plugin_dir . 'logs/';
 
@@ -58,23 +57,12 @@ function psy_error_log($message)
     file_put_contents($log_file, '[' . $date . ']' . ' - ' . $message . PHP_EOL, FILE_APPEND);
 }
 
-// Add Pinterest Connection settings page
-function pinterest_connection_plugin_menu()
-{
-    add_menu_page('Pinterest Connection Settings', 'Pinterest Connection', 'manage_options', 'pinterest-connection-plugin', 'extract_headings_plugin_settings_page' , 'dashicons-pinterest');
-
-    // Add Pinterest Auth as a sub-menu under Pinterest Connection
-    add_submenu_page('pinterest-connection-plugin', 'Pinterest Auth', 'Pinterest Auth', 'manage_options', 'pinterest-auth-settings', 'psy_display_integration_page');
-}
-add_action('admin_menu', 'pinterest_connection_plugin_menu');
-
-
 // Add plugin settings page
-/*function extract_headings_plugin_menu()
+function extract_headings_plugin_menu()
 {
     add_options_page('Extract Headings Plugin Settings', 'Extract Headings Plugin', 'manage_options', 'extract-headings-plugin', 'extract_headings_plugin_settings_page');
 }
-add_action('admin_menu', 'extract_headings_plugin_menu');*/
+add_action('admin_menu', 'extract_headings_plugin_menu');
 
 // send request to pinterest
 function sendCurlRequest($url, $method, $token, $data = null)
@@ -141,8 +129,6 @@ function sendCurlRequest($url, $method, $token, $data = null)
 function search_handler()
 {
     $postData = $_POST;
-    if(empty($postData)) return;
-
     // Call the display_pinterest_data function with the search term
     display_pinterest_data($postData);
 
@@ -220,8 +206,10 @@ function display_pinterest_data($req_post)
                 'serial_no' => $serialNumber,
                 'post_title' => get_the_title($row['post_id']),
                 'pin_board' => $row['pinterest_board_name'],
-                'success_pins' => '<button class="btn btn-primary success-pins-button" data-success-id="' . $row['post_id'] . '" data-title="' . get_the_title($row['post_id']) . '" data-permalink="' . get_permalink($row['post_id']) . '">'.$row['success_count'].' <i class="fa fa-eye" aria-hidden="true"></i></button></td>',
-                'failed_pins' => '<button class="btn btn-danger failed-pins-button" data-failed-id="' . $row['post_id'] . '" data-title="' . get_the_title($row['post_id']) . '" data-permalink="' . get_permalink($row['post_id']) . '">'.$row['failed_count'].' <i class="fa fa-eye" aria-hidden="true"></i></button>',
+                'success_pins' => '<button class="btn btn-primary success-pins-button" data-success-id="' . $row['post_id'] . '"><i class="fa fa-eye" aria-hidden="true"></i></button></td>',
+                'success_pins_count' => $row['success_count'],
+                'failed_pins' => '<button class="btn btn-danger failed-pins-button" data-failed-id="' . $row['post_id'] . '"><i class="fa fa-eye" aria-hidden="true"></i></button>',
+                'failed_pins_count' => $row['failed_count'],
                 'pins_in_queue' => $queue,
                 'total_pins' => $row['total_count'],
                 'created_at' => $rDate
@@ -258,7 +246,6 @@ function psy_access_token()
 function extract_headings_plugin_settings_page()
 {
 ?>
-
     <?php
     // Initialize an array to store all boards
     $allBoards = [];
@@ -287,7 +274,20 @@ function extract_headings_plugin_settings_page()
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="post-id">Select Post:</label>
-                                    <select class="form-control" name="post-id" id="post-id"></select>
+                                    <?php
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type' => 'post',
+                                        'post_status' => 'publish',
+                                    );
+                                    $posts = get_posts($args);
+                                    //print_r($posts);
+                                    ?>
+                                    <select class="form-control" name="post-id" id="post-id">
+                                        <?php foreach ($posts as $post) : ?>
+                                            <option value="<?php echo $post->ID; ?>"><?php echo $post->post_title; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -311,7 +311,7 @@ function extract_headings_plugin_settings_page()
                     </div>
                 </div>
                 <div id="extract-headings-container">
-                    <h4 style="text-align:center;">Imported post on Pinterest</h4>
+                    <h2>Imported post on Pinterest</h2>
                     <button onclick="location.reload();" id="refresh_btn" class="pull-right btn btn-primary" style="margin-bottom: 10px;">
                         <span class="glyphicon glyphicon-refresh"></span> Refresh
                     </button>
@@ -322,7 +322,9 @@ function extract_headings_plugin_settings_page()
                                 <th data-sorting="false">Post Title</th>
                                 <th data-sorting="false">Pinterest Board</th>
                                 <th data-sorting="false">Success pins</th>
+                                <th data-sorting="false">Success pins count</th>
                                 <th data-sorting="false">Failed pins</th>
+                                <th data-sorting="false">Failed pins count</th>
                                 <th data-sorting="false">Pins in queue</th>
                                 <th data-sorting="false">Total pins</th>
                                 <th>Created Date</th>
@@ -380,7 +382,6 @@ function extract_headings_plugin_settings_page()
                 },
                 minimumInputLength: 3
             });
-            $('#pinterest-board').select2();
         });
     </script>
 
@@ -440,17 +441,8 @@ function psy_insert_batch($data_array, $pid = null)
 }
 
 // Ajax request handler
-// Ajax request handler
 function extract_headings_ajax_request_handler()
 {
-    global $wpdb;
-
-    $data_table_name = $wpdb->prefix . 'pinterest_bulk_importer';
-
-    // Select only processing_unixTime from the last row
-    $query = "SELECT processing_unixTime FROM $data_table_name ORDER BY id DESC LIMIT 1;";
-    $last_pin_time = $wpdb->get_var($query) + rand(120, 180);
-
     check_ajax_referer('extract_headings_nonce', 'security');
 
     $post_id = $_POST['post_id'];
@@ -465,8 +457,7 @@ function extract_headings_ajax_request_handler()
     $dom = new DOMDocument();
     libxml_use_internal_errors(true);
     $dom->loadHTML($post_content);
-    $nextProcessingTime = max(strtotime(PSY_CURRENT_TIME), $last_pin_time); // Set $nextProcessingTime to the maximum of current time and last_pin_time
-    //$nextProcessingTime = strtotime(PSY_CURRENT_TIME);
+    $nextProcessingTime = strtotime(PSY_CURRENT_TIME);
     $resultArray = [];
 
     $headings = $dom->getElementsByTagName('h2');
@@ -474,10 +465,6 @@ function extract_headings_ajax_request_handler()
 
     for ($i = 0; $i < $totalHeadings; $i++) {
     $heading = $headings->item($i);
-
-    // Decode HTML entities in the heading
-    $decodedHeading = html_entity_decode($heading->nodeValue, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-
     $imageURL = '';
     $nextSibling = $heading->nextSibling;
 
@@ -514,9 +501,6 @@ function extract_headings_ajax_request_handler()
         continue;
     }
 
-    // Decode HTML entities in the post title
-    $decodedPostTitle = html_entity_decode(get_the_title($post_id), ENT_QUOTES | ENT_HTML5, 'UTF-8');
-
     // Only add to resultArray if an image is found
     if (!empty($imageURL)) {
         // Calculate the processing time for each record in both formats
@@ -525,9 +509,9 @@ function extract_headings_ajax_request_handler()
 
         $resultArray[] = [
             'post_id' => $post_id,
-            'post_title' => $decodedPostTitle,
-            'heading' => $decodedHeading,
-            'slug' => psy_heading_slug($decodedHeading),
+            'post_title' => get_the_title($post_id),
+            'heading' => $heading->nodeValue,
+            'slug' => psy_heading_slug($heading->nodeValue),
             'imageURL' => $imageURL,
             'pinterestBoard' => $pinterest_board,
             'pinterest_board_name' => $pinterestBoardName,
@@ -536,8 +520,8 @@ function extract_headings_ajax_request_handler()
             'processing_time' => $processing_time
         ];
 
-                // Add a random time between 2 to 3 minutes (120 to 180 seconds)
-        $randomTime = rand(120, 180);
+                // Add a random time between 3 to 5 minutes (180 to 300 seconds)
+        $randomTime = rand(180, 300);
         $nextProcessingTime += $randomTime;
     }
 }
@@ -564,9 +548,6 @@ function extract_headings_ajax_request_handler()
 }
 
 
-
-
-
 // print data
 function pdie($data, $terminate = true)
 {
@@ -582,13 +563,9 @@ function pdie($data, $terminate = true)
 function psy_prepare_pinterest_request($pins)
 {
     $pinData = [
-        "link" => get_permalink($pins->post_id), // Add post link
-        //"raw_title" => trim(preg_replace('/[0-9.]/', '', $pins->heading)).': '.wp_trim_words($pins->post_title, 10, '...'),
-        "title" => mb_substr(trim(preg_replace('/[0-9.]/', '', $pins->heading)).': '.wp_trim_words($pins->post_title, 10, '...'), 0, 100),
-        //"title" => trim(preg_replace('/[0-9.]/', '', $pins->heading)).': '.wp_trim_words($pins->post_title, 10, '...'),
-        "description" => trim(preg_replace('/[0-9.]/', '', $pins->heading)).': '.wp_trim_words($pins->text, 40, '...'),
+        "title" => trim(preg_replace('/[0-9.]/', '', $pins->heading)),
+        "description" => wp_trim_words($pins->text, 40, '...'),
         "board_id" => $pins->pinterestBoard,
-        "alt_text"      => trim(preg_replace('/[0-9.]/', '', $pins->heading)),
         "media_source" => [
             "source_type" => "image_url",
             "url" => $pins->imageURL,
@@ -655,7 +632,6 @@ function psy_bulk_create_pinterest_pins()
     // process if record exist
     if (!empty($records)) {
         foreach ($records as $pins) {
-            //$pin_post_id = $pins->post_id;
             list($successPins, $failedPins) = psy_prepare_pinterest_request($pins);
 
             // Update status and response from API
@@ -690,15 +666,7 @@ function psy_bulk_failed_pinterest_pins()
     $sql = $wpdb->prepare("SELECT * FROM $import_tbl WHERE status <> 0 AND failed_pins IS NOT NULL LIMIT %d", $batch_size);
     $pins = $wpdb->get_results($sql);
 
-     foreach ($pins as $pin) {
-    $failed_unsearlize = json_decode($pin->failed_pins);
-
-    // Check if the unserialization was successful and if 'code' is not equal to 1
-    if ($failed_unsearlize !== null && $failed_unsearlize[0]->code === 1) {
-        // Exclude rows where code is 1 from the output
-        continue;
-    }
-        //$pin_post_id = $pin->post_id;
+    foreach ($pins as $pin) {
         list($successPins, $failedPins) = psy_prepare_pinterest_request($pin);
 
         // Update status and response from API
@@ -795,8 +763,7 @@ function custom_unserialize_endpoint()
     global $wpdb;
 
     // Ensure you have the ID from your AJAX request
-     $id = absint($_POST['id']); // Replace this with how you get the ID from your AJAX request
-    if(empty($id)) return;
+    $id = $_POST['id']; // Replace this with how you get the ID from your AJAX request
 
     // Construct the SQL query using $wpdb->prepare to prevent SQL injection
     $table_name = $wpdb->prefix . PSY_BULK_IMPORT_TBL;
@@ -804,9 +771,8 @@ function custom_unserialize_endpoint()
 
     // Execute the query and get the results
     $results = $wpdb->get_results($query, ARRAY_A);
-    //pdie($results);
     //echo "<pre>";
-    //print_r($results); 
+    //print_r($results);
     //die();
     if (!empty($results)) {
 
@@ -821,14 +787,12 @@ function custom_unserialize_endpoint()
             $sucess_decode = json_decode($results[$i]['success_pins']);
             $success_pins_data = json_decode($results[$i]['success_pins'], true); // true for associative array
 
-            //pdie($sucess_decode,false);
-
             if (!empty($success_pins_data)) {
                 if (isset($success_pins_data[0]['media_source']['url'])) {
                     $image_url = esc_url($success_pins_data[0]['media_source']['url']);
                 } else {
                     // Handle the case when the image URL is not available
-                    $image_url = esc_url($success_pins_data[0]['media']['images']['1200x']['url']); // You can provide a default image URL or an appropriate message
+                    $image_url = esc_url($sucess_decode[0]->media->images->{'1200x'}->url); // You can provide a default image URL or an appropriate message
                 }
             } else {
                 // Handle the case when the JSON data is empty
@@ -837,11 +801,11 @@ function custom_unserialize_endpoint()
 
             $html .= '<div class="col-lg-4 col-md-4 col-sm-6 col-12">';
             $html .= '<div class="card">
-                <img class="card-img-top" style="width: 200px; height: 200px;" src="' . $image_url . '" alt="'.(empty($image_url) ? 'No Image Found' : '').'" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">' . $results[$i]['heading'] . '</h4>
-                </div>
-            </div>';
+        <img class="card-img-top" style="width: 200px; height: 200px;" src="' . $image_url . '" alt="No Image Found" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">' . $results[$i]['heading'] . '</h4>
+        </div>
+    </div>';
             $html .= '</div>';
 
             if (($i + 1) % 3 === 0 || $i === count($results) - 1) {
@@ -871,8 +835,7 @@ function failed_unserialize_endpoint()
     global $wpdb;
 
     // Ensure you have the ID from your AJAX request
-    $id = absint($_POST['id']); // Replace this with how you get the ID from your AJAX request
-    if(empty($id)) return;
+    $id = $_POST['id']; // Replace this with how you get the ID from your AJAX request
 
     // Construct the SQL query using $wpdb->prepare to prevent SQL injection
     $table_name = $wpdb->prefix . PSY_BULK_IMPORT_TBL;
@@ -987,13 +950,6 @@ function wporg_custom_box_html($post)
 <?php
 function extract_post_pins($post_id, $req_post)
 {
-    global $wpdb;
-
-    $data_table_name = $wpdb->prefix . 'pinterest_bulk_importer';
-
-    // Select only processing_unixTime from the last row
-    $query = "SELECT processing_unixTime FROM $data_table_name ORDER BY id DESC LIMIT 1;";
-    $last_pin_time = $wpdb->get_var($query);
     $pinArray = [];
     if (!empty($req_post)) {
         psy_error_log("post inside Data : " . print_r($req_post, true));
@@ -1007,8 +963,7 @@ function extract_post_pins($post_id, $req_post)
         $dom = new DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($post_content);
-        $nextProcessingTime = max(strtotime(PSY_CURRENT_TIME), $last_pin_time); // Set $nextProcessingTime to the maximum of current time and last_pin_time
-        //$nextProcessingTime = strtotime(PSY_CURRENT_TIME);
+        $nextProcessingTime = strtotime(PSY_CURRENT_TIME);
 
         $headings = $dom->getElementsByTagName('h2');
         $totalHeadings = $headings->length;
@@ -1069,8 +1024,8 @@ function extract_post_pins($post_id, $req_post)
                     'processing_time' => $processing_time
                 ];
 
-            // Add a random time between 3 to 4 minutes (180 to 240 seconds)
-            $randomTime = rand(180, 240);
+            // Add a random time between 3 to 5 minutes (180 to 300 seconds)
+            $randomTime = rand(180, 300);
             $nextProcessingTime += $randomTime;
             }
         }
@@ -1081,8 +1036,7 @@ function extract_post_pins($post_id, $req_post)
 
 function extract_headings_text_img($post_id)
 {
-    $post_id = absint($_POST['post_id']);
-    if(empty($post_id)) return;
+    $post_id = $_POST['post_id'];
 
     $resultArray = extract_post_pins($post_id, $_POST);
 
