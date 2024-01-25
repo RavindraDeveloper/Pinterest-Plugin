@@ -1,0 +1,468 @@
+[09-Nov-2023 11:29:57] - post inside Data : Array
+(
+    [_wpnonce] => 3ad8ee6e2e
+    [_wp_http_referer] => /wp-admin/post.php?post=65610&action=edit
+    [user_ID] => 4
+    [action] => editpost
+    [originalaction] => editpost
+    [post_type] => post
+    [original_post_status] => publish
+    [referredby] => 
+    [_wp_original_http_referer] => 
+    [post_ID] => 65610
+    [meta-box-order-nonce] => af8c71e31c
+    [closedpostboxesnonce] => 9aafd5de4c
+    [samplepermalinknonce] => 7a40ef5542
+    [_acf_screen] => post
+    [_acf_post_id] => 65610
+    [_acf_validation] => 1
+    [_acf_nonce] => 
+    [_acf_changed] => 0
+    [acf] => Array
+        (
+            [field_653b5d9f46c30] => 0
+        )
+
+    [scaip_metabox_nonce] => 73ba3fa4c0
+    [aioseo-post-settings] => {\"context\":\"post\",\"tags\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"id\":65610,\"priority\":\"default\",\"frequency\":\"default\",\"permalink\":\"https://psychotats.com/dev-test-new-post/\",\"editlink\":\"https://psychotats.com/wp-admin/post.php?post=65610&amp;action=edit\",\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\",\"descriptionIncludeCustomFields\":true,\"keywords\":\"[]\",\"keyphrases\":{\"focus\":{\"keyphrase\":\"\",\"score\":0,\"analysis\":{\"keyphraseInTitle\":{\"score\":0,\"maxScore\":9,\"error\":1}}},\"additional\":[]},\"page_analysis\":{\"analysis\":{\"basic\":{\"metadescriptionLength\":{\"title\":\"Meta description length\",\"description\":\"The meta description is over 160 characters.\",\"score\":6,\"maxScore\":9,\"error\":1},\"lengthContent\":{\"title\":\"Content length\",\"description\":\"This is far below the recommended minimum of words.\",\"score\":-10,\"maxScore\":9,\"error\":1},\"isInternalLink\":{\"title\":\"Internal links\",\"description\":\"We couldn\'t find any internal links in your content. Add internal links in your content.\",\"score\":3,\"maxScore\":9,\"error\":1},\"isExternalLink\":{\"title\":\"External links\",\"description\":\"No outbound links were found. Link out to external resources.\",\"score\":3,\"maxScore\":9,\"error\":1},\"errors\":4},\"title\":{\"titleLength\":{\"title\":\"SEO Title length\",\"description\":\"The title is too short.\",\"score\":6,\"maxScore\":9,\"error\":1},\"errors\":1},\"readability\":{\"contentHasAssets\":{\"error\":0,\"title\":\"Images/videos in content\",\"description\":\"Your content contains images and/or video(s).\",\"score\":5,\"maxScore\":5},\"paragraphLength\":{\"title\":\"Paragraphs length\",\"description\":\"You are using short paragraphs.\",\"score\":5,\"maxScore\":5,\"error\":0},\"sentenceLength\":{\"title\":\"Sentences length\",\"description\":\"50% of the sentences contain more than 20 words, which is more than the recommended maximum of 25%. Try to shorten the sentences.\",\"score\":6,\"maxScore\":9,\"error\":1},\"passiveVoice\":{\"title\":\"Passive voice\",\"description\":\"You\'re using enough active voice. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"transitionWords\":{\"title\":\"Transition words\",\"description\":\"None of the sentences contain transition words. Use some.\",\"score\":3,\"maxScore\":9,\"error\":1},\"consecutiveSentences\":{\"title\":\"Consecutive sentences\",\"description\":\"There is enough variety in your sentences. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"subheadingsDistribution\":{\"title\":\"Subheading distribution\",\"description\":\"Great job!\",\"score\":9,\"maxScore\":9,\"error\":0},\"calculateFleschReading\":{\"title\":\"Flesch reading ease\",\"description\":\"The copy scores 85.9 in the test, which is considered easy to read.\",\"score\":9,\"maxScore\":9,\"error\":0},\"errors\":2}}},\"loading\":{\"focus\":false,\"additional\":[]},\"type\":\"Post\",\"postType\":\"post\",\"postStatus\":\"publish\",\"isSpecialPage\":false,\"isHomePage\":false,\"isWooCommercePageWithoutSchema\":false,\"seo_score\":65,\"pillar_content\":false,\"canonicalUrl\":null,\"default\":true,\"noindex\":false,\"noarchive\":false,\"nosnippet\":false,\"nofollow\":false,\"noimageindex\":false,\"noodp\":false,\"notranslate\":false,\"maxSnippet\":-1,\"maxVideoPreview\":-1,\"maxImagePreview\":\"large\",\"modalOpen\":false,\"generalMobilePrev\":false,\"socialMobilePreview\":false,\"og_object_type\":\"default\",\"og_title\":null,\"og_description\":null,\"og_image_custom_url\":null,\"og_image_custom_fields\":null,\"og_image_type\":\"default\",\"og_video\":\"\",\"og_article_section\":\"\",\"og_article_tags\":\"[]\",\"twitter_use_og\":false,\"twitter_card\":\"default\",\"twitter_image_custom_url\":null,\"twitter_image_custom_fields\":null,\"twitter_image_type\":\"default\",\"twitter_title\":null,\"twitter_description\":null,\"schema\":{\"blockGraphs\":[],\"customGraphs\":[],\"default\":{\"data\":{\"Article\":[],\"Course\":[],\"Dataset\":[],\"FAQPage\":[],\"Movie\":[],\"Person\":[],\"Product\":[],\"Recipe\":[],\"Service\":[],\"SoftwareApplication\":[],\"WebPage\":[]},\"graphName\":\"BlogPosting\",\"isEnabled\":true},\"graphs\":[]},\"metaDefaults\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"linkAssistant\":{\"modalOpen\":false},\"limit_modified_date\":false,\"redirects\":{\"modalOpen\":false},\"options\":{\"linkFormat\":{\"internalLinkCount\":0,\"linkAssistantDismissed\":false},\"primaryTerm\":{\"productEducationDismissed\":false}}}
+    [PostSettingsNonce] => edccbfa46d
+    [previewGeneralIsMobile] => on
+    [yoast_free_metabox_nonce] => 356f306864
+    [yoast_wpseo_focuskw] => 
+    [yoast_wpseo_title] => 
+    [yoast_wpseo_metadesc] => 
+    [yoast_wpseo_linkdex] => -1207
+    [yoast_wpseo_content_score] => 90
+    [yoast_wpseo_inclusive_language_score] => 0
+    [yoast_wpseo_is_cornerstone] => false
+    [yoast_wpseo_estimated-reading-time-minutes] => 1
+    [yoast_wpseo_meta-robots-noindex] => 0
+    [yoast_wpseo_meta-robots-nofollow] => 0
+    [yoast_wpseo_meta-robots-adv] => 
+    [yoast_wpseo_bctitle] => 
+    [yoast_wpseo_canonical] => 
+    [yoast_wpseo_wordproof_timestamp] => 
+    [yoast_wpseo_schema_page_type] => 
+    [yoast_wpseo_schema_article_type] => 
+    [yoast_wpseo_opengraph-title] => 
+    [yoast_wpseo_opengraph-description] => 
+    [yoast_wpseo_opengraph-image] => 
+    [yoast_wpseo_opengraph-image-id] => 
+    [yoast_wpseo_twitter-title] => 
+    [yoast_wpseo_twitter-description] => 
+    [yoast_wpseo_twitter-image] => 
+    [yoast_wpseo_twitter-image-id] => 
+    [yoast_wpseo_primary_category_term] => 1
+    [yoast_wpseo_primary_category_nonce] => 13d95d96a6
+    [screen] => mobile
+    [heateor_sss_meta_nonce] => c716439d00
+    [pinterest_board] => 1109081914423845557
+    [pinterestBoardName] => New dev test
+    [comment_status] => open
+    [ping_status] => open
+    [post_author] => 4
+    [post_mime_type] => 
+    [ID] => 65610
+    [post_status] => publish
+)
+
+[09-Nov-2023 11:29:57] - Extracted Data : Array
+(
+    [0] => Array
+        (
+            [post_id] => 65610
+            [heading] => two kinds of people (New Post Test)
+            [slug] => two-kinds-of-people-new-post-test
+            [imageURL] => https://psychotats.com/wp-content/uploads/2023/10/Arlin-Ffrench.jpg
+            [pinterestBoard] => 1109081914423845557
+            [pinterest_board_name] => New dev test
+            [text] => two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people
+            [processing_unixTime] => 1699529395
+            [processing_time] => 2023-11-09 11:29:55
+        )
+
+    [1] => Array
+        (
+            [post_id] => 65610
+            [heading] => wo kinds of people New Post 
+            [slug] => wo-kinds-of-people-new-post
+            [imageURL] => https://psychotats.com/wp-content/uploads/2023/10/vivienne-saoki.webp
+            [pinterestBoard] => 1109081914423845557
+            [pinterest_board_name] => New dev test
+            [text] => wo kinds of people New Post wo kinds of people New Post  wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post  wo kinds of people New Post wo kinds of people New Post
+            [processing_unixTime] => 1699529575
+            [processing_time] => 2023-11-09 11:32:55
+        )
+
+)
+
+[09-Nov-2023 11:45:03] - post inside Data : Array
+(
+    [_wpnonce] => 3ad8ee6e2e
+    [_wp_http_referer] => /wp-admin/post.php?post=65610&action=edit
+    [user_ID] => 4
+    [action] => editpost
+    [originalaction] => editpost
+    [post_type] => post
+    [original_post_status] => publish
+    [referredby] => 
+    [_wp_original_http_referer] => 
+    [post_ID] => 65610
+    [meta-box-order-nonce] => af8c71e31c
+    [closedpostboxesnonce] => 9aafd5de4c
+    [samplepermalinknonce] => 7a40ef5542
+    [_acf_screen] => post
+    [_acf_post_id] => 65610
+    [_acf_validation] => 1
+    [_acf_nonce] => 
+    [_acf_changed] => 0
+    [acf] => Array
+        (
+            [field_653b5d9f46c30] => 0
+        )
+
+    [scaip_metabox_nonce] => 73ba3fa4c0
+    [aioseo-post-settings] => {\"context\":\"post\",\"tags\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"id\":65610,\"priority\":\"default\",\"frequency\":\"default\",\"permalink\":\"https://psychotats.com/dev-test-new-post/\",\"editlink\":\"https://psychotats.com/wp-admin/post.php?post=65610&amp;action=edit\",\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\",\"descriptionIncludeCustomFields\":true,\"keywords\":\"[]\",\"keyphrases\":{\"focus\":{\"keyphrase\":\"\",\"score\":0,\"analysis\":{\"keyphraseInTitle\":{\"score\":0,\"maxScore\":9,\"error\":1}}},\"additional\":[]},\"page_analysis\":{\"analysis\":{\"basic\":{\"metadescriptionLength\":{\"title\":\"Meta description length\",\"description\":\"The meta description is over 160 characters.\",\"score\":6,\"maxScore\":9,\"error\":1},\"lengthContent\":{\"title\":\"Content length\",\"description\":\"This is far below the recommended minimum of words.\",\"score\":-10,\"maxScore\":9,\"error\":1},\"isInternalLink\":{\"title\":\"Internal links\",\"description\":\"We couldn\'t find any internal links in your content. Add internal links in your content.\",\"score\":3,\"maxScore\":9,\"error\":1},\"isExternalLink\":{\"title\":\"External links\",\"description\":\"No outbound links were found. Link out to external resources.\",\"score\":3,\"maxScore\":9,\"error\":1},\"errors\":4},\"title\":{\"titleLength\":{\"title\":\"SEO Title length\",\"description\":\"The title is too short.\",\"score\":6,\"maxScore\":9,\"error\":1},\"errors\":1},\"readability\":{\"contentHasAssets\":{\"error\":0,\"title\":\"Images/videos in content\",\"description\":\"Your content contains images and/or video(s).\",\"score\":5,\"maxScore\":5},\"paragraphLength\":{\"title\":\"Paragraphs length\",\"description\":\"You are using short paragraphs.\",\"score\":5,\"maxScore\":5,\"error\":0},\"sentenceLength\":{\"title\":\"Sentences length\",\"description\":\"50% of the sentences contain more than 20 words, which is more than the recommended maximum of 25%. Try to shorten the sentences.\",\"score\":6,\"maxScore\":9,\"error\":1},\"passiveVoice\":{\"title\":\"Passive voice\",\"description\":\"You\'re using enough active voice. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"transitionWords\":{\"title\":\"Transition words\",\"description\":\"None of the sentences contain transition words. Use some.\",\"score\":3,\"maxScore\":9,\"error\":1},\"consecutiveSentences\":{\"title\":\"Consecutive sentences\",\"description\":\"There is enough variety in your sentences. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"subheadingsDistribution\":{\"title\":\"Subheading distribution\",\"description\":\"Great job!\",\"score\":9,\"maxScore\":9,\"error\":0},\"calculateFleschReading\":{\"title\":\"Flesch reading ease\",\"description\":\"The copy scores 85.9 in the test, which is considered easy to read.\",\"score\":9,\"maxScore\":9,\"error\":0},\"errors\":2}}},\"loading\":{\"focus\":false,\"additional\":[]},\"type\":\"Post\",\"postType\":\"post\",\"postStatus\":\"publish\",\"isSpecialPage\":false,\"isHomePage\":false,\"isWooCommercePageWithoutSchema\":false,\"seo_score\":65,\"pillar_content\":false,\"canonicalUrl\":null,\"default\":true,\"noindex\":false,\"noarchive\":false,\"nosnippet\":false,\"nofollow\":false,\"noimageindex\":false,\"noodp\":false,\"notranslate\":false,\"maxSnippet\":-1,\"maxVideoPreview\":-1,\"maxImagePreview\":\"large\",\"modalOpen\":false,\"generalMobilePrev\":false,\"socialMobilePreview\":false,\"og_object_type\":\"default\",\"og_title\":null,\"og_description\":null,\"og_image_custom_url\":null,\"og_image_custom_fields\":null,\"og_image_type\":\"default\",\"og_video\":\"\",\"og_article_section\":\"\",\"og_article_tags\":\"[]\",\"twitter_use_og\":false,\"twitter_card\":\"default\",\"twitter_image_custom_url\":null,\"twitter_image_custom_fields\":null,\"twitter_image_type\":\"default\",\"twitter_title\":null,\"twitter_description\":null,\"schema\":{\"blockGraphs\":[],\"customGraphs\":[],\"default\":{\"data\":{\"Article\":[],\"Course\":[],\"Dataset\":[],\"FAQPage\":[],\"Movie\":[],\"Person\":[],\"Product\":[],\"Recipe\":[],\"Service\":[],\"SoftwareApplication\":[],\"WebPage\":[]},\"graphName\":\"BlogPosting\",\"isEnabled\":true},\"graphs\":[]},\"metaDefaults\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"linkAssistant\":{\"modalOpen\":false},\"limit_modified_date\":false,\"redirects\":{\"modalOpen\":false},\"options\":{\"linkFormat\":{\"internalLinkCount\":0,\"linkAssistantDismissed\":false},\"primaryTerm\":{\"productEducationDismissed\":false}}}
+    [PostSettingsNonce] => edccbfa46d
+    [previewGeneralIsMobile] => on
+    [yoast_free_metabox_nonce] => 356f306864
+    [yoast_wpseo_focuskw] => 
+    [yoast_wpseo_title] => 
+    [yoast_wpseo_metadesc] => 
+    [yoast_wpseo_linkdex] => -1207
+    [yoast_wpseo_content_score] => 90
+    [yoast_wpseo_inclusive_language_score] => 0
+    [yoast_wpseo_is_cornerstone] => false
+    [yoast_wpseo_estimated-reading-time-minutes] => 1
+    [yoast_wpseo_meta-robots-noindex] => 0
+    [yoast_wpseo_meta-robots-nofollow] => 0
+    [yoast_wpseo_meta-robots-adv] => 
+    [yoast_wpseo_bctitle] => 
+    [yoast_wpseo_canonical] => 
+    [yoast_wpseo_wordproof_timestamp] => 
+    [yoast_wpseo_schema_page_type] => 
+    [yoast_wpseo_schema_article_type] => 
+    [yoast_wpseo_opengraph-title] => 
+    [yoast_wpseo_opengraph-description] => 
+    [yoast_wpseo_opengraph-image] => 
+    [yoast_wpseo_opengraph-image-id] => 
+    [yoast_wpseo_twitter-title] => 
+    [yoast_wpseo_twitter-description] => 
+    [yoast_wpseo_twitter-image] => 
+    [yoast_wpseo_twitter-image-id] => 
+    [yoast_wpseo_primary_category_term] => 1
+    [yoast_wpseo_primary_category_nonce] => 13d95d96a6
+    [screen] => mobile
+    [heateor_sss_meta_nonce] => c716439d00
+    [pinterest_board] => 1109081914423845557
+    [pinterestBoardName] => New dev test
+    [comment_status] => open
+    [ping_status] => open
+    [post_author] => 4
+    [post_mime_type] => 
+    [ID] => 65610
+    [post_status] => publish
+)
+
+[09-Nov-2023 11:47:14] - post inside Data : Array
+(
+    [_wpnonce] => 3ad8ee6e2e
+    [_wp_http_referer] => /wp-admin/post.php?post=65610&action=edit
+    [user_ID] => 4
+    [action] => editpost
+    [originalaction] => editpost
+    [post_type] => post
+    [original_post_status] => publish
+    [referredby] => 
+    [_wp_original_http_referer] => 
+    [post_ID] => 65610
+    [meta-box-order-nonce] => af8c71e31c
+    [closedpostboxesnonce] => 9aafd5de4c
+    [samplepermalinknonce] => 7a40ef5542
+    [_acf_screen] => post
+    [_acf_post_id] => 65610
+    [_acf_validation] => 1
+    [_acf_nonce] => 
+    [_acf_changed] => 0
+    [acf] => Array
+        (
+            [field_653b5d9f46c30] => 0
+        )
+
+    [scaip_metabox_nonce] => 73ba3fa4c0
+    [aioseo-post-settings] => {\"context\":\"post\",\"tags\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"id\":65610,\"priority\":\"default\",\"frequency\":\"default\",\"permalink\":\"https://psychotats.com/dev-test-new-post/\",\"editlink\":\"https://psychotats.com/wp-admin/post.php?post=65610&amp;action=edit\",\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\",\"descriptionIncludeCustomFields\":true,\"keywords\":\"[]\",\"keyphrases\":{\"focus\":{\"keyphrase\":\"\",\"score\":0,\"analysis\":{\"keyphraseInTitle\":{\"score\":0,\"maxScore\":9,\"error\":1}}},\"additional\":[]},\"page_analysis\":{\"analysis\":{\"basic\":{\"metadescriptionLength\":{\"title\":\"Meta description length\",\"description\":\"The meta description is over 160 characters.\",\"score\":6,\"maxScore\":9,\"error\":1},\"lengthContent\":{\"title\":\"Content length\",\"description\":\"This is far below the recommended minimum of words.\",\"score\":-10,\"maxScore\":9,\"error\":1},\"isInternalLink\":{\"title\":\"Internal links\",\"description\":\"We couldn\'t find any internal links in your content. Add internal links in your content.\",\"score\":3,\"maxScore\":9,\"error\":1},\"isExternalLink\":{\"title\":\"External links\",\"description\":\"No outbound links were found. Link out to external resources.\",\"score\":3,\"maxScore\":9,\"error\":1},\"errors\":4},\"title\":{\"titleLength\":{\"title\":\"SEO Title length\",\"description\":\"The title is too short.\",\"score\":6,\"maxScore\":9,\"error\":1},\"errors\":1},\"readability\":{\"contentHasAssets\":{\"error\":0,\"title\":\"Images/videos in content\",\"description\":\"Your content contains images and/or video(s).\",\"score\":5,\"maxScore\":5},\"paragraphLength\":{\"title\":\"Paragraphs length\",\"description\":\"You are using short paragraphs.\",\"score\":5,\"maxScore\":5,\"error\":0},\"sentenceLength\":{\"title\":\"Sentences length\",\"description\":\"50% of the sentences contain more than 20 words, which is more than the recommended maximum of 25%. Try to shorten the sentences.\",\"score\":6,\"maxScore\":9,\"error\":1},\"passiveVoice\":{\"title\":\"Passive voice\",\"description\":\"You\'re using enough active voice. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"transitionWords\":{\"title\":\"Transition words\",\"description\":\"None of the sentences contain transition words. Use some.\",\"score\":3,\"maxScore\":9,\"error\":1},\"consecutiveSentences\":{\"title\":\"Consecutive sentences\",\"description\":\"There is enough variety in your sentences. That\'s great!\",\"score\":9,\"maxScore\":9,\"error\":0},\"subheadingsDistribution\":{\"title\":\"Subheading distribution\",\"description\":\"Great job!\",\"score\":9,\"maxScore\":9,\"error\":0},\"calculateFleschReading\":{\"title\":\"Flesch reading ease\",\"description\":\"The copy scores 85.9 in the test, which is considered easy to read.\",\"score\":9,\"maxScore\":9,\"error\":0},\"errors\":2}}},\"loading\":{\"focus\":false,\"additional\":[]},\"type\":\"Post\",\"postType\":\"post\",\"postStatus\":\"publish\",\"isSpecialPage\":false,\"isHomePage\":false,\"isWooCommercePageWithoutSchema\":false,\"seo_score\":65,\"pillar_content\":false,\"canonicalUrl\":null,\"default\":true,\"noindex\":false,\"noarchive\":false,\"nosnippet\":false,\"nofollow\":false,\"noimageindex\":false,\"noodp\":false,\"notranslate\":false,\"maxSnippet\":-1,\"maxVideoPreview\":-1,\"maxImagePreview\":\"large\",\"modalOpen\":false,\"generalMobilePrev\":false,\"socialMobilePreview\":false,\"og_object_type\":\"default\",\"og_title\":null,\"og_description\":null,\"og_image_custom_url\":null,\"og_image_custom_fields\":null,\"og_image_type\":\"default\",\"og_video\":\"\",\"og_article_section\":\"\",\"og_article_tags\":\"[]\",\"twitter_use_og\":false,\"twitter_card\":\"default\",\"twitter_image_custom_url\":null,\"twitter_image_custom_fields\":null,\"twitter_image_type\":\"default\",\"twitter_title\":null,\"twitter_description\":null,\"schema\":{\"blockGraphs\":[],\"customGraphs\":[],\"default\":{\"data\":{\"Article\":[],\"Course\":[],\"Dataset\":[],\"FAQPage\":[],\"Movie\":[],\"Person\":[],\"Product\":[],\"Recipe\":[],\"Service\":[],\"SoftwareApplication\":[],\"WebPage\":[]},\"graphName\":\"BlogPosting\",\"isEnabled\":true},\"graphs\":[]},\"metaDefaults\":{\"title\":\"#post_title #separator_sa #site_title\",\"description\":\"#post_excerpt\"},\"linkAssistant\":{\"modalOpen\":false},\"limit_modified_date\":false,\"redirects\":{\"modalOpen\":false},\"options\":{\"linkFormat\":{\"internalLinkCount\":0,\"linkAssistantDismissed\":false},\"primaryTerm\":{\"productEducationDismissed\":false}}}
+    [PostSettingsNonce] => edccbfa46d
+    [previewGeneralIsMobile] => on
+    [yoast_free_metabox_nonce] => 356f306864
+    [yoast_wpseo_focuskw] => 
+    [yoast_wpseo_title] => 
+    [yoast_wpseo_metadesc] => 
+    [yoast_wpseo_linkdex] => -1207
+    [yoast_wpseo_content_score] => 90
+    [yoast_wpseo_inclusive_language_score] => 0
+    [yoast_wpseo_is_cornerstone] => false
+    [yoast_wpseo_estimated-reading-time-minutes] => 1
+    [yoast_wpseo_meta-robots-noindex] => 0
+    [yoast_wpseo_meta-robots-nofollow] => 0
+    [yoast_wpseo_meta-robots-adv] => 
+    [yoast_wpseo_bctitle] => 
+    [yoast_wpseo_canonical] => 
+    [yoast_wpseo_wordproof_timestamp] => 
+    [yoast_wpseo_schema_page_type] => 
+    [yoast_wpseo_schema_article_type] => 
+    [yoast_wpseo_opengraph-title] => 
+    [yoast_wpseo_opengraph-description] => 
+    [yoast_wpseo_opengraph-image] => 
+    [yoast_wpseo_opengraph-image-id] => 
+    [yoast_wpseo_twitter-title] => 
+    [yoast_wpseo_twitter-description] => 
+    [yoast_wpseo_twitter-image] => 
+    [yoast_wpseo_twitter-image-id] => 
+    [yoast_wpseo_primary_category_term] => 1
+    [yoast_wpseo_primary_category_nonce] => 13d95d96a6
+    [screen] => mobile
+    [heateor_sss_meta_nonce] => c716439d00
+    [pinterest_board] => 1109081914423845557
+    [pinterestBoardName] => New dev test
+    [comment_status] => open
+    [ping_status] => open
+    [post_author] => 4
+    [post_mime_type] => 
+    [ID] => 65610
+    [post_status] => publish
+)
+
+[09-Nov-2023 11:48:54] - API response header for [two kinds of people (New Post Test)] : HTTP/2 201 
+content-type: application/json
+pinterest-version: 291e8b8
+x-content-type-options: nosniff
+x-frame-options: DENY
+access-control-allow-credentials: true
+p3p: CP="Pinterest does not have a P3P policy. You can find our privacy policy at https://www.pinterest.com/_/_/policy/privacy-policy."
+x-envoy-upstream-service-time: 676
+pinterest-generated-by: tpp-api-prod-0a03f339
+x-ratelimit-limit: 100, 100;w=1, 100;w=60
+x-ratelimit-remaining: 99
+x-ratelimit-reset: 1
+content-encoding: gzip
+vary: Accept-Encoding
+cache-control: no-cache, no-store, must-revalidate
+x-pinterest-rid: 1828356984872930
+date: Thu, 09 Nov 2023 11:48:54 GMT
+alt-svc: h3=":443"; ma=600
+set-cookie: _ir=0; Max-Age=1800; HttpOnly; Path=/; Secure
+akamai-grn: 0.cc74d917.1699530534.d7ece08
+x-cdn: akamai
+
+
+[09-Nov-2023 11:48:54] - API Post Data for [two kinds of people (New Post Test)] : Array
+(
+    [title] => two kinds of people (New Post Test)
+    [description] => two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people
+    [board_id] => 1109081914423845557
+    [media_source] => Array
+        (
+            [source_type] => image_url
+            [url] => https://psychotats.com/wp-content/uploads/2023/10/Arlin-Ffrench.jpg
+        )
+
+)
+
+[09-Nov-2023 11:48:54] - API Response for [two kinds of people (New Post Test)] : {"message":"Pin created successfully but api response empty"}
+[09-Nov-2023 11:48:54] - API Success Data for [two kinds of people (New Post Test)] : Array
+(
+    [0] => Array
+        (
+            [title] => two kinds of people (New Post Test)
+            [description] => two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people (New Post Test)two kinds of people
+            [board_id] => 1109081914423845557
+            [media_source] => Array
+                (
+                    [source_type] => image_url
+                    [url] => https://psychotats.com/wp-content/uploads/2023/10/Arlin-Ffrench.jpg
+                )
+
+        )
+
+)
+
+[09-Nov-2023 11:48:54] - API Failed Data for [two kinds of people (New Post Test)] : Array
+(
+)
+
+[09-Nov-2023 11:51:44] - API response header for [wo kinds of people New Post] : HTTP/2 201 
+content-type: application/json
+pinterest-version: 291e8b8
+x-content-type-options: nosniff
+x-frame-options: DENY
+access-control-allow-credentials: true
+p3p: CP="Pinterest does not have a P3P policy. You can find our privacy policy at https://www.pinterest.com/_/_/policy/privacy-policy."
+x-envoy-upstream-service-time: 535
+x-ratelimit-limit: 100, 100;w=1, 100;w=60
+x-ratelimit-remaining: 99
+x-ratelimit-reset: 1
+cache-control: no-cache, no-store, must-revalidate
+age: 0
+set-cookie: _ir=0; Max-Age=1800; HttpOnly; Path=/; Secure
+x-pinterest-rid: 1465481536911694
+date: Thu, 09 Nov 2023 11:51:44 GMT
+vary: Accept-Encoding
+x-cdn: fastly
+alt-svc: h3=":443";ma=600
+pinterest-generated-by: tpp-api-prod-0a033da9
+content-length: 1129
+
+
+[09-Nov-2023 11:51:44] - API Post Data for [wo kinds of people New Post] : Array
+(
+    [title] => wo kinds of people New Post
+    [description] => wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people...
+    [board_id] => 1109081914423845557
+    [media_source] => Array
+        (
+            [source_type] => image_url
+            [url] => https://psychotats.com/wp-content/uploads/2023/10/vivienne-saoki.webp
+        )
+
+)
+
+[09-Nov-2023 11:51:44] - API Response for [wo kinds of people New Post] : stdClass Object
+(
+    [link] => 
+    [pin_metrics] => 
+    [creative_type] => REGULAR
+    [board_section_id] => 
+    [note] => 
+    [has_been_promoted] => 
+    [product_tags] => Array
+        (
+        )
+
+    [board_owner] => stdClass Object
+        (
+            [username] => thepsychotats
+        )
+
+    [parent_pin_id] => 
+    [dominant_color] => #655e5c
+    [is_owner] => 1
+    [board_id] => 1109081914423845557
+    [title] => wo kinds of people New Post
+    [media] => stdClass Object
+        (
+            [media_type] => image
+            [images] => stdClass Object
+                (
+                    [150x150] => stdClass Object
+                        (
+                            [width] => 150
+                            [height] => 150
+                            [url] => https://i.pinimg.com/150x150/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                        )
+
+                    [400x300] => stdClass Object
+                        (
+                            [width] => 250
+                            [height] => 248
+                            [url] => https://i.pinimg.com/400x300/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                        )
+
+                    [600x] => stdClass Object
+                        (
+                            [width] => 250
+                            [height] => 248
+                            [url] => https://i.pinimg.com/564x/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                        )
+
+                    [1200x] => stdClass Object
+                        (
+                            [width] => 250
+                            [height] => 248
+                            [url] => https://i.pinimg.com/1200x/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                        )
+
+                )
+
+        )
+
+    [description] => wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people...
+    [created_at] => 2023-11-09T11:51:44
+    [id] => 1109081845719333045
+    [is_standard] => 1
+    [alt_text] => 
+)
+
+[09-Nov-2023 11:51:44] - API Success Data for [wo kinds of people New Post] : Array
+(
+    [0] => stdClass Object
+        (
+            [link] => 
+            [pin_metrics] => 
+            [creative_type] => REGULAR
+            [board_section_id] => 
+            [note] => 
+            [has_been_promoted] => 
+            [product_tags] => Array
+                (
+                )
+
+            [board_owner] => stdClass Object
+                (
+                    [username] => thepsychotats
+                )
+
+            [parent_pin_id] => 
+            [dominant_color] => #655e5c
+            [is_owner] => 1
+            [board_id] => 1109081914423845557
+            [title] => wo kinds of people New Post
+            [media] => stdClass Object
+                (
+                    [media_type] => image
+                    [images] => stdClass Object
+                        (
+                            [150x150] => stdClass Object
+                                (
+                                    [width] => 150
+                                    [height] => 150
+                                    [url] => https://i.pinimg.com/150x150/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                                )
+
+                            [400x300] => stdClass Object
+                                (
+                                    [width] => 250
+                                    [height] => 248
+                                    [url] => https://i.pinimg.com/400x300/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                                )
+
+                            [600x] => stdClass Object
+                                (
+                                    [width] => 250
+                                    [height] => 248
+                                    [url] => https://i.pinimg.com/564x/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                                )
+
+                            [1200x] => stdClass Object
+                                (
+                                    [width] => 250
+                                    [height] => 248
+                                    [url] => https://i.pinimg.com/1200x/39/47/a9/3947a99d3758c53fc3ad7737b5e185d8.jpg
+                                )
+
+                        )
+
+                )
+
+            [description] => wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people New Post wo kinds of people...
+            [created_at] => 2023-11-09T11:51:44
+            [id] => 1109081845719333045
+            [is_standard] => 1
+            [alt_text] => 
+        )
+
+)
+
+[09-Nov-2023 11:51:44] - API Failed Data for [wo kinds of people New Post] : Array
+(
+)
+
